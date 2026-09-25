@@ -1,16 +1,58 @@
-:root {
-  --text: grey;
-  --text-h: black; 
-  --bg: white;
+@font-face {
+font-family:'Neue Montreal';
+src: url('./assets/fonts/PPNeueMontreal-Regular.woff2') format('woff2');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+@font-face {
+  font-family:'Neue Montreal';
+  src: url('./assets/fonts/PPNeueMontreal-Extrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family:'Neue Montreal';
+  src: url('./assets/fonts/PPNeueMontreal-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --text: black;
+  --text-muted: grey; 
+  --bg: white;
+  --border: grey; 
+
+
+  --sans: 'Neue Montreal', system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  color-scheme: ligth; 
+  background: var(--bg);
+  color: var(--text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  min-height: 100dvh;
+}
+h1,
+h2,
+nav a {
+  font-weight: 600;
 }
 @media (prefers-reduced-motion: no-preference){
 html{
