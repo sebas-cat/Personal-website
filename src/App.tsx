@@ -1,3 +1,5 @@
+import {projects} from './data/projects'
+import ProjectCard from './components/ProjectCard'
 
 interface NavigationItem {
   label: string
@@ -11,6 +13,7 @@ const navigationItems: NavigationItem[] = [
   { label: "Certs", href: "#certs" },
   { label: "Contact", href: "#contact" },
 ]
+
 const App = () => {
   return (
     <div>
@@ -28,7 +31,10 @@ const App = () => {
         <section id="about"><h2>About</h2></section>
           <section id="education"><h2>Education</h2></section>
             <section id="experience"><h2>Experience</h2></section>
-              <section id="projects"><h2>Projects</h2></section>
+              <section id="projects"><h2>Projects</h2>
+              {projects.map((project) => (
+                <ProjectCard key={project.id} project={project}/>
+              ))}</section>
                 <section id="certs"><h2>Certifications</h2> </section>
                   <section id="contact"><h2>Contact information</h2></section>
                   
