@@ -58,4 +58,19 @@ nav a {
 html{
   scroll-behavior: smooth;
 }
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] > * {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(1.5rem);
+    transition:
+      clip-path 800ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  }
+  [data-reveal][data-inview='true'] > * {
+    clip-path: inset(0);
+    transform: translateY(0);
+  }
+}
+
 }
