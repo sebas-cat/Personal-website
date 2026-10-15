@@ -81,3 +81,17 @@ html{
 }
 
 }
+
+.webhero h1
+{
+ font-size: clamp(2.5rem, 8vw, 6rem);
+ font-weight: 800;
+ line-height: 0.95;
+ letter-spacing: -0.03em;
+ margin: 0;
+
+}
+
+.webhero h1 span{
+  display:block
+}

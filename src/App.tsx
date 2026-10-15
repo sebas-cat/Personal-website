@@ -1,5 +1,6 @@
 import {projects} from './data/projects'
 import ProjectCard from './components/ProjectCard'
+import WebHero from './components/webHero'
 
 interface NavigationItem {
   label: string
@@ -27,7 +28,7 @@ const App = () => {
         </ul>
       </nav>
       <main>
-        <h1>Portafolio website</h1>
+        <WebHero />
         <section id="about"><h2>About</h2></section>
           <section id="education"><h2>Education</h2></section>
             <section id="experience"><h2>Experience</h2></section>
